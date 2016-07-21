@@ -23,6 +23,7 @@ var io = require('socket.io').listen(server);
 io.sockets.on('connection', function(socket){
   console.log(socket.id);
   socket.on('location_sumbitted', function(data){
+    console.log(data)
     io.emit('location_recieved', data)
   })
 })
