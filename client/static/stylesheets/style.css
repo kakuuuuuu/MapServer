@@ -1,0 +1,241 @@
+* {
+margin:0;
+padding:0;
+border:0;
+font-family: Helvetica, sans-serif;
+-webkit-text-size-adjust:none;
+}
+@font-face {
+  font-family: uranium;
+  src: url('../fonts/URANIUM.ttf');
+}
+.uranium{
+  font-family: uranium;
+}
+body{
+  background-color: black;
+}
+.loading{
+  height: 60px;
+  width: 80px;
+}
+#mainpage{
+  background-image: url('../images/street.jpg')
+}
+#loginbackground{
+  background-image: url('../images/login.jpg')
+}
+#regbackground{
+  background-image: url('../images/regbackground.jpg')
+}
+#header{
+  height: 270px;
+  background-color: rgba(211,211,211,0.8);
+  border-radius: 8px;
+}
+#profile{
+  background-color: #CBC9C9;
+  border-radius: 8px;
+}
+#lobby{
+  background-color: #CBC9C9;
+  border-radius: 8px;
+}
+#chat{
+  height: 100%;
+}
+#usersbox{
+  background-color: rgba(211,211,211,0.8);
+  border-radius: 8px;
+}
+.lob{
+  background-color: #CBC9C9;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.title{
+  margin-left: 6px;
+}
+.button{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  cursor:pointer;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.logimg{
+  height: 50px;
+  width: 50px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#accountlinks{
+  margin-bottom: 20px;
+}
+#landing{
+  margin-top: 3%;
+}
+#regheader{
+  margin-top: 3%;
+  background-color: rgba(211,211,211,0.8);
+  border-radius: 8px;
+}
+#logheader{
+  margin-top: 5%;
+
+  background-color: rgba(211,211,211,0.8);
+  border-radius: 8px;
+}
+#searchForm{
+  margin-bottom: 10px;
+}
+#chat{
+  height: 80%;
+  background-color: rgba(211,211,211,0.8);
+  border-radius: 8px;
+}
+.error{
+  color:red;
+}
+.whitefont{
+  color:white;
+}
+.redfont{
+  color:red;
+}
+#userinfo{
+  background-color: #CBC9C9;
+  border-radius: 8px;
+}
+.pfpic{
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+}
+#fbpic{
+  margin-left:0px;
+}
+#fbinfo{
+  margin-left: 20px;
+}
+#twitpic{
+  margin-left:0px;
+}
+#twitinfo{
+  margin-left: 20px;
+}
+#gpic{
+  margin-left:0px;
+}
+#ginfo{
+  margin-left: 20px;
+}
+.fbbutton{
+  background-color: #3b5998;
+}
+.twitbutton{
+  background-color: #55acee;
+}
+.googbutton{
+  background-color: #4CAF50;
+}
+.line{
+  border-bottom: groove;
+}
+.twitter{
+  height: 59vh;
+  overflow-y: auto;
+}
+.animate-enter,
+.animate-leave
+{
+  -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  position: relative;
+  display: block;
+}
+
+.animate-enter.animate-enter-active,
+.animate-leave {
+  opacity: 1;
+  top: 0;
+  height: 30px;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+  top: -50px;
+  height: 0px;
+}
+#twitchhead{
+  border: 3px solid #7e57c2;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-style: oblique;
+}
+.game{
+  height: 320px;
+  border-radius: 5px;
+  padding: 10px;
+    border: 1px solid #7e57c2;
+    box-shadow:  -1px 1px #7e57c2,
+         -2px 2px #7e57c2,
+         -3px 3px #7e57c2,
+         -4px 4px #7e57c2,
+         -5px 5px #7e57c2;
+}
+.gameimg{
+  opacity: 0.6;
+}
+.gameimg:hover{
+  opacity: 1;
+}
+.amazon{
+  height: 380px;
+  width: 90%;
+  background-color: #CBC9C9;
+  opacity: 0.5;
+  border-radius: 5px;
+  padding: 10px;
+    border: 1px solid #ffa000;
+    box-shadow:  -1px 1px #ffa000,
+         -2px 2px #ffa000,
+         -3px 3px #ffa000,
+         -4px 4px #ffa000,
+         -5px 5px #ffa000;
+  margin-bottom: 8px;
+}
+.amazon:hover{
+  opacity: 1;
+}
+.amzimg{
+  border-radius: 5px;
+  height: 50%;
+  max-width: 70%;
+  margin-bottom: 5px;
+}
+.amztext{
+  width: 90%;
+  height: 30%;
+  text-decoration: underline;
+
+}
+.blackfont{
+  color: black;
+  font-weight: bold;
+}
+.heads{
+  font-weight: 200;
+}
+.thin{
+  font-weight: 100;
+}
+.twitchbtn{
+  vertical-align:bottom
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='stylesheets/style.css' />
+</head>
+<body id='regbackground'>
+<div class="row">
+<div id='regheader' class="col s4 offset-s4 center-align">
+  <h1 class='uranium center-align'>Register</h1>
+  <% if (message.length > 0) { %>
+      <div class="center-align redfont"><%= message %></div>
+  <% } %>
+  <form action="/signup" method="post">
+    <div class="input-field">
+      <label>Email</label>
+      <input type="text" class="form-control" name="email">
+    </div>
+    <div class="input-field">
+      <label>Name</label>
+      <input type="text" class="form-control" name="name">
+    </div>
+    <div class="input-field">
+      <label>Password</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+    <div class='input-field'>
+      <label>Confirm</label>
+      <input type="password" class="form-control" name="confirm">
+    </div>
+    <button type="submit" class="btn waves-light waves-effect blue-grey darken-1">Register</button>
+  </form>
+  <hr>
+  <div class='line' style='margin-top:10px;'></div>
+  <div class='row' style='padding-top: 10px;'>
+  <p>Already have an account? <a href="/login">Login</a></p>
+  <p>Or go <a href="/">home</a>.</p>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<div class='row'>
+  <nav>
+    <div class="nav-wrapper grey darken-3">
+      <a href="#/" class="brand-logo uranium title">Map Share</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class='thin btn-large deep-orange darken-4 waves-effect waves-light' href="#/">Back</a></li>
+        <li><a class='thin btn-large blue-grey darken-3 waves-effect waves-light' href="/logout" target='_self'>Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class='row' ng-controller='roomsController'>
+<div id='lobby' class='col s4 offset-s4'>
+  <h1 class='uranium center-align'>Lobby</h1>
+</div>
+<div class='row col s12'>
+  <div class='col s4 offset-s1 lob'>
+    <h4 class='uranium center-align'>Your Rooms</h4>
+    <ul class='center-align'>
+      <li ng-repeat='room in rooms'>
+        <a style='color: black; text-decoration: underline;' ng-href='#/room/{{room._id}}'><h5><span ng-bind='room.name'></span></h5></a>
+      </li>
+    </ul>
+
+  </div>
+  <div class='col s4 offset-s2 lob'>
+    <h4 class='uranium center-align'> Create a new one</h4>
+    <form ng-submit='addRoom()'>
+      <div class='input-field'>
+        <input type=text ng-model='newRoom.name'/>
+        <label>Name</label>
+      </div>
+      <div class='input-field'>
+        <button class='btn waves-effect waves-light' type='submit'>Create Room</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>

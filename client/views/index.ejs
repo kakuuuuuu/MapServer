@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>MapShare</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='stylesheets/style.css' />
+</head>
+<body id='mainpage'>
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1874757336084999',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div id='landing' class="row">
+
+    <div id='header' class="col s4 offset-s4 center-align">
+        <h1 class='uranium'>Map Share</h1>
+        <div id='accountlinks' class='col s12'>
+          <a href='/login' class='btn blue-grey darken-1'>Sign In</a>
+          <a href='/signup' class='btn blue-grey darken-1'>Sign Up</a>
+        </div>
+        <a href="/auth/facebook"><img class='logimg' src='images/facebook.png' alt='facebook' /></a>
+        <a href="/auth/twitter"><img class='logimg' src='images/twitter.png' alt='twitter' /></a>
+        <a href="/auth/google"><img class='logimg' src='images/google.png' alt='google' /></a>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+      }
+      .angular-google-map-container {
+        height: 50%;
+      }
+</style>
+<div class='row'>
+  <nav>
+    <div class="nav-wrapper grey darken-3">
+      <a href="#/" class="brand-logo uranium title">Map Share</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class='thin btn-large deep-orange darken-4 waves-effect waves-light' href="#/lobby">Back</a></li>
+        <li><a class='thin btn-large blue-grey darken-3 waves-effect waves-light' href="/logout" target='_self'>Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class='row' ng-controller='mapsController'>
+    <div class='col s6 row'>
+      <form id='searchForm' ng-submit='chooseLocation()' class='col s12'>
+        <h4 class='uranium'>Choose a place to meetup:</h4>
+        <div class='input-field'>
+          <input type='text' ng-model='location.name' class='validate'/>
+          <label for='name'>Meetup Location</label>
+        </div>
+        <div class='input-field row'>
+          <button type='submit' class='btn col s6'>Submit</button>
+          <loading class='col s6'></loading>
+        </div>
+      </form>
+      <div id='map-test' class='col s12'>
+
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' pan='map.pan' bounds='map.bounds' control='map.control'>
+          <ui-gmap-markers models="markers" fit='true' coords="'coords'" modelsByRef="false" doRebuildAll="markers" icon="'icon'">
+            <ui-gmap-windows show="show">
+              <div ng-non-bindable>{{title}}</div>
+            </ui-gmap-windows></ui-gmap-markers>
+          <ui-gmap-polylines models="polylines" path="'path'" stroke="'stroke'" fit="'fit'" visible="'visible'" doRebuildAll="polylines"></ui-gmap-polyline>
+        </ui-gmap-google-map>
+      </div>
+    </div>
+
+    <div id='chat' class='col s6'>
+      <div class='col s12'>
+        <h3 class='uranium'>Chat - <span ng-bind='room.name'></span></h3>
+      </div>
+      <div style='height:60%; position:relative; overflow-y: scroll' class='col s12' schroll-bottom="room._comments">
+        <p ng-repeat='comment in room._comments'><span ng-bind='comment._user.local.name'></span> says: <span ng-bind='comment.text'></span></p>
+        <div id='bottom'></div>
+      </div>
+      <form style='height: 40%;' class='col s12' ng-submit='addComment()'>
+        <div class='input-field'>
+          <textarea style='background-color: white; border-radius: 8px;' ng-model='newComment.text'></textarea>
+          <label>Write a comment</label>
+        </div>
+        <div class='input-field'>
+          <button class='btn waves-light waves-effect'>Post</button>
+        </div>
+      </form>
+    </div>
+    <div class='col s12 row'>
+      <div class='col s6'>
+          <h5>Users</h5>
+          <ul>
+            <li ng-repeat='user in room._users'>
+              <h6 ng-bind='user.local.name'></h6>
+            </li>
+          </ul>
+      </div>
+      <form class='col s6' ng-submit='addUser()'>
+        <div class='input-field'>
+          <input type='text' ng-model='newUser.email' />
+          <label>Add User By Email</label>
+        </div>
+        <div class='input-field'>
+          <button class='btn waves-effect waves-light'>Add</button>
+        </div>
+      </form>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,72 @@
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div ng-controller='streamsController'>
+  <nav>
+    <div class="nav-wrapper grey darken-3">
+      <a href="#/" class="brand-logo uranium title">Forge</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class='thin btn-large deep-orange darken-4 waves-effect waves-light' href="#/">Back</a></li>
+        <li><a class='thin btn-large blue-grey darken-3 waves-effect waves-light' href="/logout" target='_self'>Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class='row'>
+    <h2 class='uranium center-align whitefont'>Search the Forge</h2>
+  </div>
+  <div class='row'>
+    <div class='col s12 m4 twitter'>
+			<a class="twitter-timeline" href="https://twitter.com/Le_Forge_/lists/gamedeals1">A Twitter List by Le Forge</a>
+		</div>
+    <div class='col s12 m8'>
+      <h5 ng-if='streamer' class='whitefont heads center-align'>Top Streamer for <span class='heads' ng-bind='streamgame'></span> - <span class='heads' ng-bind='streamer'></span></h5>
+      <h5 ng-if='!streamer' class='whitefont heads center-align'>No Stream Available</h5>
+      <h5 ng-if='!streamer' class='whitefont heads center-align'>Please Select Game to Find a Stream</h5>
+      <div id='stream'>
+
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col s12 m12 offset-s3'>
+      <form ng-submit='gameSearch()'>
+        <h3 class='whitefont center-align heads'>Search for Games</h3>
+        <div class='input-field'>
+          <input class='whitefont' type='text' ng-model='newSearch' />
+          <label>Search Twitch</label>
+        </div>
+        <button type='submit' class='btn waves-effect waves-light deep-orange darken-4'>Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div ng-if='games' class='row'>
+    <div ng-if='games.games.length!=1' id='twitchhead' class='col s10 m10 l10 offset-s1 offset-m1 offset-l1 center-align'>
+      <h3 ng-if='games.games.length==0' class='whitefont heads'>No Matches</h3>
+      <h3 ng-if='games.games.length>1' class='whitefont heads uranium'>Games on Twitch</h3>
+    </div>
+    <h3 ng-if='games.games.length==1' class='whitefont heads left-align'>Selected Game - <span class='heads' ng-bind='games.games[0].name'></span></h3>
+    <div style='margin-bottom: 20px;' ng-repeat='game in games.games' class='col s12 m4 row' ng-animate="'animate'">
+      <div class='game'>
+        <div>
+          <img class='gameimg' ng-click='search(game)' ng-src='{{game.box.medium}}' alt='gameart' />
+        </div>
+        <div style='margin-left: 5px;'>
+          <p ng-bind='game.name' class='whitefont flow-text'></p>
+        </div>
+        <div class='twitchbtn'>
+          <button ng-click='search(game)' class='col btn deep-purple lighten-1'>Preview</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-if='options.length>0' class='row'>
+    <h3 class='whitefont heads valign-wrapper' style='color: #ffa000'><i class="whitefont medium material-icons valign">shopping_cart</i> Suggestions from Amazon</h3>
+    <div class='col s12 m3' ng-repeat='option in options'>
+      <div class='amazon'>
+        <a ng-href='{{option.DetailPageURL[0]}}' target="_blank"><img class='amzimg' ng-src='{{option.MediumImage[0].URL[0]}}' alt='amazonimg'/></a>
+        <a class='blackfont' ng-href='{{option.DetailPageURL[0]}}' target="_blank"><p class='amztext' ng-bind='option.ItemAttributes[0].Title[0] | limitTo: 100'></p></a>
+        <p class='flow-text'>Starting at: <span style='text-decoration: underline' ng-bind='option.OfferSummary[0].LowestNewPrice[0].FormattedPrice[0]'></span></p>
+        <a ng-href='{{option.DetailPageURL[0]}}' target="_blank" class='btn amber darken-2 waves-effect waves-light'>Buy</a>
+      </div>
+    </div>
+  </div>
+</div>
