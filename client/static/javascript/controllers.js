@@ -70,8 +70,29 @@ market_module.controller('mapsController', function($scope, userFactory, roomFac
     $scope.room = data
     console.log($scope.room._comments)
     console.log($scope.room._users)
-
+    roomFactory.getLocation(function(data){
+      $scope.map = {
+        latitude: data.location.lat,
+        longitude: data.location.lng
+      }
+      $scope.markers.push({
+        id:"currentlocation",
+        coords: {
+          latitude: data.location.lat,
+          longitude: data.location.lng
+        },
+        icon: 'http://maps.gstatic.com/mapfiles/markers2/icon_green.png',
+        title: "Current Location"
+      })
+        if($scope.room.latitude && $scope.room.longitude){
+          $scope.addPoint({lat: $scope.room.latitude, lng: $scope.room.longitude}, $scope.room.destination)
+        }
+        else{
+          $scope.loading = false;
+        }
+    })
   })
+
   $scope.user = JSON.parse(localStorage.currentuser)
 
   socket.emit('joinRoom', id)
@@ -132,34 +153,26 @@ market_module.controller('mapsController', function($scope, userFactory, roomFac
      fit: true,
      visible: true
    }];
-   var onSuccess = function(position) {
-    $scope.map = {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude
-    };
-    $scope.markers.push({
-      id:"currentlocation",
-      coords: {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude
-      },
-      icon: 'http://maps.gstatic.com/mapfiles/markers2/icon_green.png',
-      title: "Current Location"
-    })
-
-
-    $scope.$apply();
-    if($scope.room.latitude && $scope.room.longitude){
-      $scope.addPoint({lat: $scope.room.latitude, lng: $scope.room.longitude}, $scope.room.destination)
-    }
-    else{
-      $scope.loading = false;
-    }
-  }
-  function onError(error) {
-      console.log('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
-  }
-  navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  //  var onSuccess = function(position) {
+  //   $scope.map = {
+  //       latitude: position.coords.latitude,
+  //       longitude: position.coords.longitude
+  //   };
+  //
+  //
+  //
+  //   $scope.$apply();
+  //   if($scope.room.latitude && $scope.room.longitude){
+  //     $scope.addPoint({lat: $scope.room.latitude, lng: $scope.room.longitude}, $scope.room.destination)
+  //   }
+  //   else{
+  //     $scope.loading = false;
+  //   }
+  // }
+  // function onError(error) {
+  //     console.log('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
+  // }
+  // navigator.geolocation.getCurrentPosition(onSuccess, onError);
   $scope.map.control = {};
   uiGmapGoogleMapApi.then(function(maps){
 

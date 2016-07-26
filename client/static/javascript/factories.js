@@ -81,6 +81,7 @@ market_module.factory('streamFactory', function($http, $location){
   return factory;
 })
 market_module.factory('roomFactory', function($http, $location){
+
   var rooms = [];
   var room = {};
   var factory = {};
@@ -103,6 +104,11 @@ market_module.factory('roomFactory', function($http, $location){
     info = {room: newRoom, user: user}
     $http.post('/createRoom', info).success(function($http){
       callback($http)
+    })
+  }
+  factory.getLocation = function(callback){
+    $http.post('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyC3SQ3ovU47it6DB23_yZTfCbWTOT3r_1E',{}).success(function(result){
+      callback(result)
     })
   }
   factory.addComment = function(id, newComment, user, callback){
