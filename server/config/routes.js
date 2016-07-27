@@ -28,6 +28,10 @@ module.exports = function(app, passport, path, client) {
     app.post('/roomUser/:id', isLoggedIn, function(req, res){
         rooms.addUser(req, res)
     })
+    app.get('/iostest', function(req, res){
+      console.log('IOSSS')
+        res.json({message:'RESPONSE'})
+    })
 // ===============================================================================================================
 // HOMEPAGE ROUTES ===============================================================================================
 // ===============================================================================================================
@@ -131,12 +135,14 @@ module.exports = function(app, passport, path, client) {
         failureRedirect : '/connect/local', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
+
 // ===============================================================================================================
 // START ANGULAR =================================================================================================
 // ===============================================================================================================
     // Upon successful log in with any methods will send angular app
     // Will prevent angular app from sending if not logged in
     app.get('/profile', isLoggedIn, function(req, res) {
+      console.log('success')
       res.sendFile('dashboard.html', {root: './client/static'})
     });
 // ===============================================================================================================

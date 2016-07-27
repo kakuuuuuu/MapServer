@@ -201,15 +201,19 @@ market_module.controller('mapsController', function($scope, userFactory, roomFac
     	};
 
       directionsService.route(request, function(response, status) {
-        console.log(response)
+
         $scope.polylines[0].path = response.routes[0].overview_path
-        console.log($scope.polylines[0].path)
+
         $scope.loading=false;
       });
     }
   });
   socket.on('changeCoords', function(data){
-    $scope.addPoint(data.coords, data.name)
+    console.log('changing coords')
+    var location = {lat: data.lat, lng: data.lng}
+    console.log(data)
+    console.log(location)
+    $scope.addPoint({lat: data.lat, lng: data.lng}, data.name)
   })
   $scope.chooseLocation = function(){
     $scope.loading=true
@@ -217,8 +221,10 @@ market_module.controller('mapsController', function($scope, userFactory, roomFac
       console.log($http)
       if($http.results.length>0){
         roomFactory.changeCoords(id, $http.results[0].geometry.location, $scope.location.name, function(){
-          socket.emit('coords', {room: id, coords: $http.results[0].geometry.location, name: $scope.location.name})
-          $scope.addPoint($http.results[0].geometry.location, $scope.location.name)
+          console.log("LOCATION")
+          console.log($http.results[0].geometry.location)
+          socket.emit('coords', {room: id, lat: $http.results[0].geometry.location.lat, lng: $http.results[0].geometry.location.lng, name: $scope.location.name})
+          // $scope.addPoint($http.results[0].geometry.location, $scope.location.name)
           $scope.location = {};
         })
       }

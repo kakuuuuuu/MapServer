@@ -52,7 +52,9 @@ io.sockets.on('connection', function(socket){
   var rooms = []
   console.log(socket.id);
   socket.on('joinRoom', function(data){
+    console.log('here')
     socket.join(data)
+    console.log(data)
     rooms.push(data)
     socket.emit('roomJoined', 'You are in room '+data)
   })
@@ -70,6 +72,7 @@ io.sockets.on('connection', function(socket){
     }
   })
   socket.on('coords', function(data){
+    console.log(data)
     io.to(data.room).emit('changeCoords', data)
   })
 })
