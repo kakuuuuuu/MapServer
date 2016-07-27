@@ -101,7 +101,7 @@ market_module.factory('roomFactory', function($http, $location){
     })
   }
   factory.addRoom = function(newRoom, user, callback){
-    info = {room: newRoom, user: user}
+    info = {room: newRoom.name, user: user}
     $http.post('/createRoom', info).success(function($http){
       callback($http)
     })

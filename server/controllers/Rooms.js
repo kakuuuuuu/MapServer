@@ -32,7 +32,8 @@ module.exports = {
         console.log(err)
       }
       else{
-        var room = new Room({_owner: req.body.user._id, _users:[req.body.user._id],_comments:[], name:req.body.room.name, namespace:req.body.room.name})
+        console.log(req.body.room)
+        var room = new Room({_owner: req.body.user._id, _users:[req.body.user._id],_comments:[], name:req.body.room, namespace:req.body.room})
         user._rooms.push(room);
         user.save(function(err){
           if(err){
