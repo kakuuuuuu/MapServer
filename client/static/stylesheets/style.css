@@ -5,12 +5,28 @@ border:0;
 font-family: Helvetica, sans-serif;
 -webkit-text-size-adjust:none;
 }
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
 @font-face {
   font-family: uranium;
   src: url('../fonts/URANIUM.ttf');
 }
+@font-face {
+  font-family: questrial;
+  src: url('../fonts/Questrial-Regular.ttf');
+}
 .uranium{
   font-family: uranium;
+}
+.questrial{
+  font-family: questrial;
 }
 body{
   background-color: black;
@@ -41,8 +57,11 @@ body{
   background-color: #CBC9C9;
   border-radius: 8px;
 }
-#chat{
-  height: 100%;
+#mapinput{
+  height: 85%;
+}
+#map-test{
+  height: 60%;
 }
 #usersbox{
   background-color: rgba(211,211,211,0.8);
@@ -89,10 +108,11 @@ body{
   border-radius: 8px;
 }
 #searchForm{
+  height: 40%;
   margin-bottom: 10px;
 }
 #chat{
-  height: 80%;
+  height: 85%;
   background-color: rgba(211,211,211,0.8);
   border-radius: 8px;
 }
@@ -297,4 +317,10 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+#rooms{
+  height: 60%;
+}
+#addroom{
+  height: 60%;
 }

@@ -1,22 +1,3 @@
-//////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////Socket Factory/////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////
-// market_module.factory('socketFactory', function($http){
-//   var factory = {};
-//   var socket = io.connect();
-//   factory.joinRoom = function(roomid){
-//     socket.emit('joinRoom', roomid)
-//   }
-//   socket.on('roomJoined', function(data){
-//     console.log(data)
-//   })
-//   factory.sendMessage = function(user, roomid, message){
-//     socket.emit('sendMessage', {user, room: roomid, message: message})
-//   }
-//
-//
-//   return factory
-// })
 market_module.factory('socket', function ($rootScope) {
   var socket = io.connect();
   return {

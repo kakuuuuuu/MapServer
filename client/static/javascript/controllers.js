@@ -100,7 +100,7 @@ market_module.controller('mapsController', function($scope, userFactory, roomFac
     console.log(data)
   })
 
-  $location.hash('bottom');
+  // $location.hash('bottom');
   $scope.addComment = function(){
     roomFactory.addComment(id, $scope.newComment, $scope.user, function(data){
       data._user = $scope.user
