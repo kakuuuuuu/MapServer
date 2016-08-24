@@ -21,8 +21,6 @@ market_module.factory('socket', function ($rootScope) {
     }
   };
 });
-
-
 market_module.factory('userFactory', function($http, $location, $window){
   var factory = {};
   var user = {};

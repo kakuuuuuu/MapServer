@@ -36,6 +36,9 @@ module.exports = function(app, passport, path, client) {
 // HOMEPAGE ROUTES ===============================================================================================
 // ===============================================================================================================
     app.get('/', function(req, res) {
+        res.render('portfolio'); // load the index.ejs file
+    });
+    app.get('/landing', function(req, res) {
         res.render('index'); // load the index.ejs file
     });
     app.post('/user', passport.authenticate('local-signup'), function(req, res){
