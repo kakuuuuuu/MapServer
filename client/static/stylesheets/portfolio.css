@@ -49,10 +49,6 @@ hr {
   #title{
     font-size: 3em !important;
   }
-  #slide02, #slide01{
-    height: auto;
-    min-height: 100vh;
-  }
   .abtpic{
     width: 40vmin !important;
     height: 40vmin !important;
@@ -73,9 +69,7 @@ hr {
   .projdiv{
     max-height: 50vh;
   }
-  #slide03{
-    max-height: 220vh;
-  }
+
   #projtitle{
     text-align: center;
   }
