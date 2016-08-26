@@ -80,6 +80,7 @@ hr {
   #skillimgs{
     margin-top:5px;
   }
+
 }
 .come-in {
   /*visibility: visible;*/
@@ -253,6 +254,7 @@ nav.primary ul li a:hover {
 }
 #slide03{
   height: auto;
+  min-height: 210vh;
   background-color: #008C82;
 }
 #contact{
@@ -306,7 +308,7 @@ nav.primary ul li a:hover {
 }
 .projdiv{
   height: auto;
-  min-height: 100vh !important;
+  min-height: 100vh;
 }
 
 .proj{
