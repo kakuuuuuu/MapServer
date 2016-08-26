@@ -139,20 +139,29 @@
         <nav class="nav primary topNav">
                 <ul>
                     <li><a id='navname' class='navlink questrial white large' href="#">Kyle Tsuyemura</a></li>
-                    <li class='navscroll'><a class='navlink questrial white' id='abtbtn' href="#">About</a></li>
-                    <li class='navscroll'><a class='navlink questrial white' id='techbtn' href="#">Technology</a></li>
+                    <li class='navscroll'><a class='questrial white navlink' id='abtbtn' href="#"><span class='glyphicon glyphicon-user' aria-hidden="true"></span> <span class='navscroll'>About</span></a></li>
+                    <li class='navscroll'><a class='questrial white navlink' id='techbtn' href="#"><span class='glyphicon glyphicon-wrench' aria-hidden="true"></span> <span class='navscroll'>Technology</span></a></li>
                     <li class='dropdown navscroll'>
-                      <a class="navlink questrial white dropdown-toggle" href='#' id="projbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Projects
+                      <a class="questrial white dropdown-toggle navlink" href='#' id="projbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class='glyphicon glyphicon-paperclip' aria-hidden="true"></span> <span class='navscroll'>Projects</span>
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="projbtn">
-                        <li><a id='getoutbtn' href="#">Get Out</a></li>
-                        <li><a id='forgebtn' href="#">Forge</a></li>
-                        <li><a id='mapsharebtn' href="#">Map Share</a></li>
-                        <li><a id='mapshareiosbtn' href="#">Map Share (iOS)</a></li>
+                        <li><a id='getoutbtn' href="#" class='questrial'>Get Out</a></li>
+                        <li><a id='forgebtn' href="#" class='questrial'>Forge</a></li>
+                        <li><a id='mapsharebtn' href="#" class='questrial'>Map Share</a></li>
+                        <li><a id='mapshareiosbtn' href="#" class='questrial'>Map Share (iOS)</a></li>
                       </ul>
                     </li>
-                    <li class='navscroll'><a class='navlink questrial white' id='contactbtn' href="#">Contact</a></li>
+                    <li class='navscroll'><a class='questrial white navlink' id='contactbtn' href="#"><span class='glyphicon glyphicon-inbox' aria-hidden="true"></span> <span class='navscroll'>Contact</span></a></li>
+                    <li class='dropdown smallnav'>
+                      <a class='questrial white dropdown-toggle navlink' href='#' id='smallbtn' data-toggle='dropdown'>Navigate <span class='glyphicon glyphicon-th-list'></span></a>
+                      <ul class='dropdown-menu' aria-labelledby='smallbtn'>
+                        <li><a class='questrial  navlink smalllinks' id='abtbtn' href="#"><span class='glyphicon glyphicon-user' aria-hidden="true"></span> About</a></li>
+                        <li><a class='questrial  navlink smalllinks' id='techbtn' href="#"><span class='glyphicon glyphicon-wrench' aria-hidden="true"></span> Technology</a></li>
+                        <li><a class='questrial  navlink smalllinks' id='projbtn' href='#'><span class='glyphicon glyphicon-paperclip'></span> Projects</a></li>
+                        <li><a class='questrial  navlink smalllinks' id='contactbtn' href="#"><span class='glyphicon glyphicon-inbox' aria-hidden="true"></span> Contact</a></li>
+                      </ul>
+                    </li>
                 </ul>
         </nav>
     </div>

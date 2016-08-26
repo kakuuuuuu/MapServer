@@ -29,10 +29,19 @@ hr {
     display: none !important;
     visibility: hidden;
   }
+  .glyphicon{
+    font-size: 1em !important;
+  }
   .scrolledNav{
     opacity: 1 !important;
   }
-
+  .smallnav{
+    visibility: visible !important;
+    display: block !important;
+  }
+  .smalllinks{
+    font-size: 0.7em !important;
+  }
 
   #name{
     font-size: 5em !important;
@@ -141,12 +150,12 @@ hr {
   transition: color 0.5s ease;
 }
 .large{
-  font-size: 20;
+  font-size: 20px;
   font-family: questrial;
   transition: font-size 0.3s ease;
 }
 .small{
-  font-size: 1em;
+  font-size: 1em !important;
   transition: font-size 0.5s ease;
 }
 .topNav{
@@ -157,6 +166,11 @@ hr {
   background-color: white;
   opacity: 0.95;
   transition: background-color 0.5s ease;
+}
+.smallnav{
+  visibility: hidden;
+  display:none;
+  float: right !important;
 }
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -200,7 +214,7 @@ nav.primary ul li a {
 }
 
 nav.primary ul li a:hover {
-  background: gray;
+  background: lightgray;
   cursor: pointer;
 }
 
