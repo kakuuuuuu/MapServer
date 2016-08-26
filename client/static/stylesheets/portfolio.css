@@ -40,12 +40,12 @@ hr {
   }
 }
 @media(max-width: 1000px){
-  input, nav{
+  input, nav, .spacer{
     display: none;
     visibility: hidden;
   }
-  #banner, .spacer{
-    background-size: auto;
+  #banner{
+    background-size: cover !important;
   }
 
   .projdiv{
@@ -212,7 +212,7 @@ nav.primary ul li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 #slide01{
   height: auto;
