@@ -305,7 +305,8 @@ nav.primary ul li a:hover {
   margin-top: 10px;
 }
 .projdiv{
-  height: 100vh;
+  height: auto;
+  min-height: 100vh !important;
 }
 
 .proj{
