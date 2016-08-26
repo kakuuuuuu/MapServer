@@ -21,8 +21,22 @@ hr {
 }
 
 @media(max-width: 650px){
+  #name{
+    font-size: 5em !important;
+  }
+  #title{
+    font-size: 3em !important;
+  }
   #slide02, #slide01{
-    max-height: 100vh;
+    height: auto;
+    min-height: 100vh;
+  }
+  .abtpic{
+    width: 40vmin !important;
+    height: 40vmin !important;
+  }
+  .tech{
+    max-width: 26% !important;
   }
 }
 @media(max-width: 1000px){
@@ -30,14 +44,15 @@ hr {
     display: none;
     visibility: hidden;
   }
+  #banner, .spacer{
+    background-size: auto;
+  }
+
   .projdiv{
     max-height: 50vh;
   }
   #slide03{
     max-height: 220vh;
-  }
-  #banner{
-    max-height: 60vh;
   }
   #projtitle{
     text-align: center;
@@ -178,12 +193,12 @@ nav.primary ul li a:hover {
 
 #name{
   margin-top: 60px;
-  font-size: 8vw;
+  font-size: 6em;
   color: white;
   text-align: center;
 }
 #title{
-  font-size: 4vw;
+  font-size: 4em;
   color: #92E7EF;
   text-align: center;
 }
@@ -200,11 +215,13 @@ nav.primary ul li a:hover {
     box-shadow: 20px 20px 10px #888888;
 }
 #slide01{
-  height:100vh;
+  height: auto;
+  min-height: 100vh;
   background-color: #008C82;
 }
 #slide02{
-  height:100vh;
+  height: auto;
+  min-height: 100vh;
 }
 #skilldescript{
   margin-top:20%;
@@ -230,6 +247,7 @@ nav.primary ul li a:hover {
 }
 .spacer{
   height: 18vh;
+  width: 100vw;
   background-size: 100%;
   background-attachment: fixed;
     background-position: center;
@@ -255,6 +273,9 @@ nav.primary ul li a:hover {
   width: 16vw;
   border-radius: 50vh;
   margin-bottom: 10px;
+}
+.abttxt{
+  font-size: 1.3em !important;
 }
 .tech{
   max-width: 20%;
