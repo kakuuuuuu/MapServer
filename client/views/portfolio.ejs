@@ -139,9 +139,9 @@
         <nav class="nav primary topNav">
                 <ul>
                     <li><a id='navname' class='navlink questrial white large' href="#">Kyle Tsuyemura</a></li>
-                    <li><a class='navlink questrial white' id='abtbtn' href="#">About</a></li>
-                    <li><a class='navlink questrial white' id='techbtn' href="#">Technology</a></li>
-                    <li class='dropdown'>
+                    <li class='navscroll'><a class='navlink questrial white' id='abtbtn' href="#">About</a></li>
+                    <li class='navscroll'><a class='navlink questrial white' id='techbtn' href="#">Technology</a></li>
+                    <li class='dropdown navscroll'>
                       <a class="navlink questrial white dropdown-toggle" href='#' id="projbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         Projects
                       </a>
@@ -152,7 +152,7 @@
                         <li><a id='mapshareiosbtn' href="#">Map Share (iOS)</a></li>
                       </ul>
                     </li>
-                    <li><a class='navlink questrial white' id='contactbtn' href="#">Contact</a></li>
+                    <li class='navscroll'><a class='navlink questrial white' id='contactbtn' href="#">Contact</a></li>
                 </ul>
         </nav>
     </div>
@@ -228,7 +228,7 @@
         <div class='col-md-11 col-md-offset-1 module'>
           <h1 id='projtitle' class='section questrial whitefont'>Projects</h1>
         </div>
-        <div id='getout' class='col-md-12 row projdiv module'>
+        <div id='getout' class='col-md-12 container projdiv module'>
           <div class='col-md-7 hidden-sm proj hidden-xs'>
             <!-- <img class='projpic leftalign' src='images/getout1.png' data-toggle="modal" /> -->
             <div id="getoutcarousel" class="carousel slide projpic leftalign" data-ride="carousel">
@@ -275,7 +275,7 @@
               </a>
             </div>
           </div>
-          <div class='col-md-5 col-md-offset-0 col-sm-offset-1 col-xs-offset-1 proj getouttext'>
+          <div class='col-md-5 proj getouttext'>
             <h3 class='questrial whitefont'>Get Out</h3>
             <p class='questrial whitefont'>
               Built With: Python | Flask | Pylot | Google Maps/Directions API | Open Weather API
@@ -299,17 +299,17 @@
           </div>
 
         </div>
-        <div id='forge' class='col-md-12 row projdiv module'>
+        <div id='forge' class='col-md-12 container projdiv module'>
           <div class='col-md-5 proj forgetext'>
-            <h3 class='questrial leftalign whitefont'>Forge</h3>
-            <p class='questrial leftalign whitefont'>
+            <h3 class='questrial  whitefont'>Forge</h3>
+            <p class='questrial  whitefont'>
               Built With: JavaScript | Node.js, Express.js | Angular.js | Twitch API | Passport | Amazon Product Advertising API
             </p>
-            <p class='questrial leftalign whitefont'>
+            <p class='questrial  whitefont'>
               Previews games that you're interested in with the top available Twitch streamer and relevant Amazon product listings.
             </p>
           <div class='row'>
-            <div class='col-md-3 col-sm-6 col-xs-6  col-sm-offset-0 col-xs-offset-0 col-md-offset-1 text-center'>
+            <div class='col-md-3 col-sm-6 col-xs-6 text-center'>
               <a href='https://github.com/kakuuuuuu/MapServer'>
               <img class='projlinkimg' src='images/github.png' alt='github'/>
               <p class='questrial whitefont'>
@@ -323,7 +323,7 @@
                 Check Out the App
               </p></a>
             </div>
-            <div class='col-md-12 col-sm-12 col-xs-12'>
+            <div class='col-md-5 col-sm-12 col-xs-12'>
               <h4 class='questrial leftalign whitefont'>Note: This app uses the same login and GitHub Repository as Map Share</h4>
             </div>
           </div>
@@ -336,7 +336,7 @@
           </div>
         </div>
 
-        <div id='mapshare' class='col-md-12 row projdiv module'>
+        <div id='mapshare' class='col-md-12 container projdiv module'>
           <div class='col-md-7 hidden-sm proj hidden-xs'>
             <div id="mapsharecarousel" class="carousel slide projpic leftalign" data-ride="carousel">
               <!-- Indicators -->
@@ -370,7 +370,7 @@
               </a>
             </div>
           </div>
-          <div class='col-md-5 col-md-offset-0 col-sm-offset-1 col-xs-offset-1 proj mapsharetext'>
+          <div class='col-md-5 proj mapsharetext'>
             <h3 class='questrial whitefont'>Map Share</h3>
             <p class='questrial whitefont'>
               Built With: JavaScript | Node.js, Express.js | Angular.js | Google Maps/Directions API | Socket.io
@@ -400,17 +400,17 @@
           </div>
         </div>
 
-        <div id='mapshareios' class='col-md-12 row projdiv module'>
+        <div id='mapshareios' class='col-md-12 container projdiv module'>
           <div class='col-md-5 proj iostext'>
-            <h3 class='questrial leftalign whitefont'>Map Share (iOS)</h3>
-            <p class='questrial leftalign whitefont'>
+            <h3 class='questrial  whitefont'>Map Share (iOS)</h3>
+            <p class='questrial  whitefont'>
               Built With: Swift | MapKit | Alamofire | Socket.io |
             </p>
-            <p class='questrial leftalign whitefont'>
+            <p class='questrial  whitefont'>
               Companion app to the web version of Map Share.  Shares all functionality and interactivity with the web version as well as being able to provide step-by-step directions using the built in Maps app.
             </p>
             <div class='row'>
-              <div class='col-md-3 leftalign text-center'>
+              <div class='col-md-3 col-sm-12 col-xs-12 text-center'>
                 <a href='https://github.com/kakuuuuuu/Map-Share'>
                 <img class='projlinkimg' src='images/github.png' alt='github'/>
                 <p class='questrial whitefont'>

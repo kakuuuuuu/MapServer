@@ -25,9 +25,15 @@ hr {
 }
 
 @media(max-width: 650px){
+  .navscroll{
+    display: none !important;
+    visibility: hidden;
+  }
+  .scrolledNav{
+    opacity: 1 !important;
+  }
   #banner{
     background-image: url("../images/smBanner.jpg") !important;
-
   }
   #name{
     margin-top: 40% !important;
@@ -49,11 +55,13 @@ hr {
   }
 }
 @media(max-width: 1000px){
-  input, nav, .spacer{
-    display: none;
+  .spacer, .downproj{
+    display: none !important;
     visibility: hidden;
   }
-
+  .down{
+    margin-left: 45% !important;
+  }
 
   .projdiv{
     max-height: 50vh;
@@ -238,7 +246,7 @@ nav.primary ul li a:hover {
   margin-top:10%;
 }
 #slide03{
-  height: 400vh;
+  height: auto;
   background-color: #008C82;
 }
 #contact{
