@@ -23,6 +23,7 @@ hr {
 @media(max-width: 650px){
   #banner{
     background-image: url("../images/smBanner.jpg") !important;
+
   }
   #name{
     margin-top: 40% !important;
@@ -211,6 +212,7 @@ nav.primary ul li a:hover {
   background-image: url('../images/header.png');
   background-size: 100%;
   background-attachment: fixed;
+  background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
