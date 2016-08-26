@@ -21,7 +21,11 @@ hr {
 }
 
 @media(max-width: 650px){
+  #banner{
+    background-image: url("../images/smBanner.jpg") !important;
+  }
   #name{
+    margin-top: 40% !important;
     font-size: 5em !important;
   }
   #title{
@@ -44,9 +48,7 @@ hr {
     display: none;
     visibility: hidden;
   }
-  #banner{
-    background-size: cover !important;
-  }
+
 
   .projdiv{
     max-height: 50vh;
