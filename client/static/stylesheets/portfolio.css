@@ -24,7 +24,7 @@ hr {
     padding: 0;
 }
 
-@media(max-width: 650px){
+@media(max-width: 700px){
   .navscroll{
     display: none !important;
     visibility: hidden;
@@ -32,9 +32,8 @@ hr {
   .scrolledNav{
     opacity: 1 !important;
   }
-  #banner{
-    background-image: url("../images/smBanner.jpg") !important;
-  }
+
+  
   #name{
     margin-top: 40% !important;
     font-size: 5em !important;
@@ -60,7 +59,7 @@ hr {
     visibility: hidden;
   }
   .down{
-    margin-left: 45% !important;
+    display: block; margin: 0 auto !important;
   }
 
   .projdiv{
@@ -353,7 +352,7 @@ overflow: hidden;
 }
 .down{
   height: 10vh;
-  margin-left: 48%;
+  display: block; margin: 0 auto;
   margin-top: 20px;
 }
 .downproj{
@@ -364,7 +363,6 @@ overflow: hidden;
 
 .down:hover{
   height: 12vh;
-  margin-left: 47.5%;
   transition: height 0.2s ease, margin-left 0.2s ease;
 }
 .projtitle{
