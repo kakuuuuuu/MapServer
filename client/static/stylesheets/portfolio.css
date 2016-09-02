@@ -79,7 +79,7 @@ hr {
   }
 
   .projdiv{
-    min-height: 50vh;
+    max-height: 50vh;
   }
 
   #projtitle{
