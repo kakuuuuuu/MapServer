@@ -24,10 +24,16 @@ hr {
     padding: 0;
 }
 
-@media(max-width: 700px){
-  .navscroll{
+@media(max-width: 768px){
+  #banner{
+    background-attachment: scroll !important;
+  }
+  .navscroll, .down{
     display: none !important;
     visibility: hidden;
+  }
+  .projtext{
+    font-size: 1em !important;
   }
   .glyphicon{
     font-size: 1em !important;
@@ -58,6 +64,12 @@ hr {
   }
 }
 @media(max-width: 1000px){
+  .abttxt{
+    font-size: 1.3em !important;
+  }
+  .projtext{
+    font-size: 1.2em !important;
+  }
   .spacer, .downproj{
     display: none !important;
     visibility: hidden;
@@ -67,7 +79,7 @@ hr {
   }
 
   .projdiv{
-    max-height: 50vh;
+    min-height: 50vh;
   }
 
   #projtitle{
@@ -231,7 +243,6 @@ nav.primary ul li a:hover {
   background-image: url('../images/header.png');
   background-size: 100%;
   background-attachment: fixed;
-  background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -289,17 +300,19 @@ nav.primary ul li a:hover {
   margin-top: 60px;
 }
 .abtpictures{
+  display: block;
+  margin: 0 auto;
   margin-top: 60px;
+  margin-bottom: 50px;
 }
 .abtpic{
-
   height: 16vw;
   width: 16vw;
   border-radius: 50vh;
   margin-bottom: 10px;
 }
 .abttxt{
-  font-size: 1.3em !important;
+  font-size: 1.5vw;
 }
 .tech{
   max-width: 20%;
@@ -333,6 +346,9 @@ nav.primary ul li a:hover {
 max-height: 100%;
 overflow: hidden;
 }
+.projtext{
+  font-size: 1.3vw;
+}
 
 
 
@@ -362,7 +378,8 @@ overflow: hidden;
 }
 .down{
   height: 10vh;
-  display: block; margin: 0 auto;
+  display: block;
+  margin: 0 auto;
   margin-top: 20px;
 }
 .downproj{
@@ -405,6 +422,10 @@ overflow: hidden;
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+#contactdivs{
+  display: block;
+  margin: 0 auto;
 }
 .contactlink{
   text-decoration: none;
