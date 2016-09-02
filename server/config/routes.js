@@ -4,30 +4,39 @@ module.exports = function(app, passport, path, client) {
 // ===============================================================================================================
 // API ROUTES ===============================================================================================
 // ===============================================================================================================
+    // Return user data from session on successful login
     app.get('/getuser', isLoggedIn, function(req, res){
         users.getuser(req, res)
     })
+    // Return data from Amazon Product Advertisement API
     app.post('/searchgames', isLoggedIn, function(req, res){
         users.amazonsearch(req, res, client)
     })
+    // Returns all rooms user is invited to
     app.get('/getrooms/:id', isLoggedIn, function(req, res){
         rooms.getAll(req, res)
     })
+    // Adds room to database
     app.post('/createRoom', isLoggedIn, function(req, res){
         rooms.create(req, res)
     })
+    // Returns data for room based on URL parameters
     app.get('/getroom/:id', isLoggedIn, function(req, res){
         rooms.getOne(req, res)
     })
+    // Adds comment to database
     app.post('/createComment/:id', isLoggedIn, function(req, res){
         rooms.createComment(req, res)
     })
+    // Updates coordiantes in database
     app.post('/changeCoords/:id', isLoggedIn, function(req, res){
         rooms.coords(req, res)
     })
+    // Adds user to invited list in database
     app.post('/roomUser/:id', isLoggedIn, function(req, res){
         rooms.addUser(req, res)
     })
+    // Tests if iOS Device recieves API Call
     app.get('/iostest', function(req, res){
       console.log('IOSSS')
         res.json({message:'RESPONSE'})

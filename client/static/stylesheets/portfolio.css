@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
 }
+/*removing scrollbar space*/
 body
 {
     width: 100%;
@@ -15,15 +16,8 @@ body
   overflow-x: hidden;
   -webkit-scrollbar { width: 0 !important }
 }
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
 
+/*mobile responsiveness*/
 @media(max-width: 768px){
   #banner{
     background-attachment: scroll !important;
@@ -54,6 +48,9 @@ hr {
   }
   #title{
     font-size: 3em !important;
+  }
+  .abtpictures{
+    margin: 0 auto !important;
   }
   .abtpic{
     width: 40vmin !important;

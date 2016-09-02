@@ -18,12 +18,14 @@ market_module.config(function ($routeProvider) {
           redirectTo: '/'
         });
     });
+// Directive for Angular-Google Maps
 market_module.config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
         key: 'AIzaSyC3SQ3ovU47it6DB23_yZTfCbWTOT3r_1E',
         libraries: 'weather,geometry,visualization'
     });
 })
+// Directive for map loading gif
 market_module.directive('loading', function () {
       return {
         restrict: 'E',
