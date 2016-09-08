@@ -25,26 +25,28 @@ $(window).scroll(function(){
               $('#navname').removeClass('small')
 
           }
-          if($(this).scrollTop() > $('#slide01').offset().top-230){
-              $("#abttitle, .about, .abtpic, #down2").fadeIn(1800).addClass("come-in")
-          }
-          if($(this).scrollTop() > $('#slide02').offset().top-230){
-              $(".tech, .techtext, #down3").fadeIn(1800).addClass("come-in")
-          }
-          if($(this).scrollTop() > $('#getout').offset().top-230){
-              $("#getoutcarousel, .getouttext, #projtitle, #down4").fadeIn(1800).addClass("come-in")
-          }
-          if($(this).scrollTop() > $('#forge').offset().top-300){
-              $("#forgeimg, .forgetext, #down5").fadeIn(1800).addClass("come-in")
-          }
-          if($(this).scrollTop() > $('#mapshare').offset().top-300){
-              $("#mapsharecarousel, .mapsharetext, #down6").fadeIn(1800).addClass("come-in")
-          }
-          if($(this).scrollTop() > $('#mapshareios').offset().top-300){
-              $("#ioscarousel, .iostext, #down7").fadeIn(1800).addClass("come-in")
-          }
-          if($(this).scrollTop() > $('#contact').offset().top-230){
-              $("#contacttitle, .contactdiv").fadeIn(1800).addClass("come-in")
+          if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            if($(this).scrollTop() > $('#slide01').offset().top-230){
+                $("#abttitle, .about, .abtpic, #down2").fadeIn(1800).addClass("come-in")
+            }
+            if($(this).scrollTop() > $('#slide02').offset().top-230){
+                $(".tech, .techtext, #down3").fadeIn(1800).addClass("come-in")
+            }
+            if($(this).scrollTop() > $('#getout').offset().top-230){
+                $("#getoutcarousel, .getouttext, #projtitle, #down4").fadeIn(1800).addClass("come-in")
+            }
+            if($(this).scrollTop() > $('#forge').offset().top-300){
+                $("#forgeimg, .forgetext, #down5").fadeIn(1800).addClass("come-in")
+            }
+            if($(this).scrollTop() > $('#mapshare').offset().top-300){
+                $("#mapsharecarousel, .mapsharetext, #down6").fadeIn(1800).addClass("come-in")
+            }
+            if($(this).scrollTop() > $('#mapshareios').offset().top-300){
+                $("#ioscarousel, .iostext, #down7").fadeIn(1800).addClass("come-in")
+            }
+            if($(this).scrollTop() > $('#contact').offset().top-230){
+                $("#contacttitle, .contactdiv").fadeIn(1800).addClass("come-in")
+            }
           }
       });
 
