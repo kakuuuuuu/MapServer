@@ -1,9 +1,9 @@
-/*! angular-google-maps 2.3.3 2016-05-13
+/*! angular-google-maps 2.3.4 2016-08-15
  *  AngularJS directives for Google Maps
  *  git: https://github.com/angular-ui/angular-google-maps.git
  */
 ;
-(function( window, angular, undefined ){
+(function( window, angular, _, undefined ){
   'use strict';
 /*
 !
@@ -96,7 +96,7 @@ Nicholas McCready - https://twitter.com/nmccready
         script.id = scriptId = "ui_gmap_map_load_" + (uuid.generate());
         script.type = 'text/javascript';
         script.src = getScriptUrl(options) + query;
-        return document.body.appendChild(script);
+        return document.head.appendChild(script);
       };
       isGoogleMapsLoaded = function() {
         return angular.isDefined(window.google) && angular.isDefined(window.google.maps);
@@ -4358,7 +4358,7 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
             childScope.$watch('model', (function(_this) {
               return function(newValue, oldValue) {
                 if (newValue !== oldValue) {
-                  return _this.setChildScope(childScope, newValue);
+                  return _this.setChildScope(IPoly.scopeKeys, childScope, newValue);
                 }
               };
             })(this), true);
@@ -14019,4 +14019,4 @@ angular.module('uiGmapgoogle-maps.extensions')
     })
   };
 }]);
-}( window,angular));
+}( window, angular, _));
