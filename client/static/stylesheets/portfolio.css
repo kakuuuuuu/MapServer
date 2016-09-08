@@ -42,7 +42,6 @@ body
   .smalllinks{
     font-size: 0.7em !important;
   }
-
   #name{
     font-size: 4em !important;
   }
@@ -74,11 +73,9 @@ body
   .down{
     display: block; margin: 0 auto !important;
   }
-
   .projdiv{
     height: auto;
   }
-
   #projtitle{
     text-align: center;
   }
@@ -89,7 +86,6 @@ body
   #skillimgs{
     margin-top:5px;
   }
-
 }
 .come-in {
   /*visibility: visible;*/
@@ -99,11 +95,9 @@ body
 .come-in:nth-child(odd) {
   animation-duration: 0.8s; /* So they look staggered */
 }
-
 /*.module{
   visibility: hidden;
 }*/
-
 @keyframes come-in {
   to { transform: translateY(0); }
 }
@@ -232,17 +226,14 @@ nav.primary ul li a:hover {
   color: #92E7EF;
   text-align: center;
 }
-
 #banner{
   height: 100vh;
-
-  background-image: url('../images/header.png');
+  background-image: url('../images/smBanner.png');
   background-size: 100%;
   background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 #slide01{
   height: auto;
@@ -271,7 +262,7 @@ nav.primary ul li a:hover {
   background-image: url('../images/spacer1.jpg');
 }
 #spacer2{
-  background-image: url('../images/spacer2.jpg');
+  background-image: url('../images/smBanner.jpg');
 }
 #spacer3{
   background-image: url('../images/spacer3.jpg');
@@ -288,7 +279,6 @@ nav.primary ul li a:hover {
 .center{
   text-align: center;
 }
-
 .right{
   text-align: right;
 }
@@ -319,12 +309,10 @@ nav.primary ul li a:hover {
   height: auto;
   min-height: 100vh;
 }
-
 .proj{
   margin-top:20px;
   height: 50%;
 }
-
 .projpic{
   max-width: 95%;
   max-height:100%;
@@ -336,8 +324,6 @@ nav.primary ul li a:hover {
   margin-left: 35%;
   box-shadow: 10px 10px 5px #006D65;
 }
-
-
 .carousel {
 max-height: 100%;
 overflow: hidden;
@@ -345,9 +331,6 @@ overflow: hidden;
 .projtext{
   font-size: 1.3vw;
 }
-
-
-
 .carouselimg{
   max-width: 100%;
   max-height: 50%;
@@ -383,7 +366,6 @@ overflow: hidden;
   margin-left: 48%;
   margin-top: 20px;
 }
-
 .down:hover{
   height: 12vh;
   transition: height 0.2s ease, margin-left 0.2s ease;
@@ -391,7 +373,6 @@ overflow: hidden;
 .projtitle{
   margin-left: 5%;
 }
-
 .contactdiv{
   height: 100px;
   margin-left: 30%;
@@ -401,20 +382,16 @@ overflow: hidden;
   float: left;
   margin-right: 10px;
 }
-
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
   }
-
   20%, 80% {
     transform: translate3d(2px, 0, 0);
   }
-
   30%, 50%, 70% {
     transform: translate3d(-4px, 0, 0);
   }
-
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
