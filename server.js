@@ -20,7 +20,7 @@ var client = amazon.createClient({
   awsSecret: "xxxxx",
   awsTag: "tsuyemura-20"
 });
-
+app.use(express.compress());
 // configuration ===============================================================
 require('./server/config/passport')(passport); // pass passport for configuration
 
@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded()); // get information from html forms
 app.use(bodyParser.json());
 app.use(cors());
 app.set('view engine', 'ejs'); // set up ejs for templating
-app.use(express.compress());
+
 app.use(express.static(__dirname + "/client/static"))
 app.set('views', path.join(__dirname,'./client/views'));
 // required for passport
