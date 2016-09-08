@@ -214,7 +214,9 @@ nav.primary ul li a:hover {
   background: lightgray;
   cursor: pointer;
 }
-
+.vcenter {
+  margin-top:12vh;
+}
 #name{
   margin-top: 60px;
   font-size: 6em;
@@ -262,7 +264,7 @@ nav.primary ul li a:hover {
   background-image: url('../images/spacer1.jpg');
 }
 #spacer2{
-  background-image: url('../images/smBanner.jpg');
+  background-image: url('../images/spacer2.jpg');
 }
 #spacer3{
   background-image: url('../images/spacer3.jpg');
