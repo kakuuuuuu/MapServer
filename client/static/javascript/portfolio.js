@@ -31,7 +31,7 @@ $(window).scroll(function(){
                 $("#getoutcarousel, .getouttext, #projtitle, #down4").fadeIn(1800).addClass("come-in")
             }
             if($(this).scrollTop() > $('#forge').offset().top-300){
-                $("#forgeimg, .forgetext, #down5").fadeIn(1800).addClass("come-in")
+                $("#forgeimg, #forgetext, #down5").fadeIn(1800).addClass("come-in")
             }
             if($(this).scrollTop() > $('#mapshare').offset().top-300){
                 $("#mapsharecarousel, .mapsharetext, #down6").fadeIn(1800).addClass("come-in")
@@ -48,7 +48,7 @@ $(window).scroll(function(){
 $(document).ready(fontsize)
   $(document).ready(function(){
     if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      $("#abttitle, .about, .abtpic, #down2, .tech, .techtext, #down3, #getoutcarousel, .getouttext, #projtitle, #down4, #forgeimg, .forgetext, #down5, #mapsharecarousel, .mapsharetext, #down6, #ioscarousel, .iostext, #down7, #contacttitle, .contactdiv").hide()
+      $("#abttitle, .about, .abtpic, #down2, .tech, .techtext, #down3, #getoutcarousel, .getouttext, #projtitle, #down4, #forgeimg, #forgetext, #down5, #mapsharecarousel, .mapsharetext, #down6, #ioscarousel, .iostext, #down7, #contacttitle, .contactdiv").hide()
     }
     $('#name, #title, #down1, #nav').removeClass("banner-hidden")
     $('#name, #title, #down1, #nav').addClass('vis')
