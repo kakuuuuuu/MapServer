@@ -26,6 +26,7 @@ body
     display: none !important;
     visibility: hidden;
   }
+
   .projtext{
     font-size: 1em !important;
   }
@@ -49,7 +50,21 @@ body
     font-size: 2em !important;
   }
   .abtpictures{
-    margin: 0 auto !important;
+    margin: 10% auto !important;
+  }
+  .projdiv{
+    height: auto !important;
+    border-bottom-style: inset !important;
+    border-bottom-color: #8D9296 !important;
+    border-width: 0.5 !important;
+    padding: 5% !important;
+  }
+  #mapshareios{
+    border-bottom-style: none !important;
+    padding: 5% !important;
+  }
+  .projtitle{
+    text-align: center;
   }
   .abtpic{
     width: 40vmin !important;
@@ -60,6 +75,11 @@ body
   }
 }
 @media(max-width: 1000px){
+  #slide01,#slide02,#slide03{
+    border-bottom-style: inset !important;
+    border-bottom-color: #8D9296 !important;
+    border-width: 1px !important;
+  }
   .abttxt{
     font-size: 1.3em !important;
   }
@@ -80,8 +100,8 @@ body
     text-align: center;
   }
   #skilldescript{
-    text-align: center;
-    margin-top:5px;
+    text-align: center !important;
+    margin-top: 2% !important;
   }
   #skillimgs{
     margin-top:5px;
@@ -141,7 +161,7 @@ body
   color: white;
 }
 .teal{
-  color: #92E7EF;
+  color: #008C82;
 }
 .black{
   color: black;
@@ -240,7 +260,6 @@ nav.primary ul li a:hover {
 #slide01{
   height: auto;
   min-height: 100vh;
-  background-color: #008C82;
 }
 #slide02{
   height: auto;
@@ -255,7 +274,6 @@ nav.primary ul li a:hover {
 #slide03{
   height: auto;
   min-height: 210vh;
-  background-color: #008C82;
 }
 #contact{
   height: 100vh;
@@ -289,9 +307,7 @@ nav.primary ul li a:hover {
 }
 .abtpictures{
   display: block;
-  margin: 0 auto;
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin: 5% auto;
 }
 .abtpic{
   height: 16vw;
@@ -307,9 +323,11 @@ nav.primary ul li a:hover {
   margin-left: 15px;
   margin-top: 10px;
 }
+#mapshareios{
+  height: 70vh;
+}
 .projdiv{
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
 }
 .proj{
   margin-top:20px;
@@ -323,12 +341,14 @@ nav.primary ul li a:hover {
 }
 .iosprojpic{
   width: 30%;
+  max-height: 60vh;
   margin-left: 35%;
   box-shadow: 10px 10px 5px #006D65;
+  border-radius: 10px;
 }
 .carousel {
-max-height: 100%;
-overflow: hidden;
+max-height: 55vh;
+overflow:hidden;
 }
 .projtext{
   font-size: 1.3vw;
@@ -373,16 +393,17 @@ overflow: hidden;
   transition: height 0.2s ease, margin-left 0.2s ease;
 }
 .projtitle{
-  margin-left: 5%;
+  font-size: 3em;
 }
 .contactdiv{
   height: 100px;
-  margin-left: 30%;
+  margin: 0 auto;
 }
 .contactimg{
-  height: 80px;
+  height: 10vh;
+  min-height: 60px;
   float: left;
-  margin-right: 10px;
+  margin-right: 5%;
 }
 @keyframes shake {
   10%, 90% {
@@ -400,9 +421,10 @@ overflow: hidden;
 }
 #contactdivs{
   display: block;
-  margin: 0 auto;
+  margin: 10% auto;
 }
 .contactlink{
+  font-size: 1.5em;
   text-decoration: none;
 }
 .contactlabel{

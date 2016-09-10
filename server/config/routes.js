@@ -205,19 +205,16 @@ module.exports = function(app, passport, path, client) {
 // ===============================================================================================================
     app.get('/logout', function(req, res) {
       req.logout();
-      res.redirect('/')
+      res.redirect('/landing')
     });
 };
-
 // ===============================================================================================================
 // LOGIN STATUS ==================================================================================================
 // ===============================================================================================================
 function isLoggedIn(req, res, next) {
-
     // if user is authenticated in the session, carry on
     if (req.isAuthenticated())
         return next();
-
     // if they aren't redirect them to the home page
     res.redirect('/');
 }

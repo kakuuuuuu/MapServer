@@ -4,7 +4,6 @@ fontsize = function(){
   $("#slide01 p").css('font-size', Math.min(fontSize,fontSize2));
 };
 var win = $(window);
-
 $(window).resize(fontsize)
 $(window).scroll(function(){
           console.log($(this).scrollTop())
@@ -14,16 +13,12 @@ $(window).scroll(function(){
               $('.navlink').addClass('black')
               $('#navname').addClass('small')
               $('#navname').removeClass('large')
-
-
              }
-
           else{
               $('.nav').removeClass('scrolledNav')
               $('.navlink').removeClass('black')
               $('#navname').addClass('large')
               $('#navname').removeClass('small')
-
           }
           if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             if($(this).scrollTop() > $('#slide01').offset().top-230){
@@ -55,11 +50,6 @@ $(document).ready(fontsize)
     if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       $("#abttitle, .about, .abtpic, #down2, .tech, .techtext, #down3, #getoutcarousel, .getouttext, #projtitle, #down4, #forgeimg, .forgetext, #down5, #mapsharecarousel, .mapsharetext, #down6, #ioscarousel, .iostext, #down7, #contacttitle, .contactdiv").hide()
     }
-
-    // $('#abttitle').addClass("hidden").viewportChecker({
-    //   classToAdd: 'visible animated fadeIn',
-    //   offset: 20
-    //  });
     $('#name, #title, #down1, #nav').removeClass("banner-hidden")
     $('#name, #title, #down1, #nav').addClass('vis')
     $('#down1, #abtbtn').click(function(){
