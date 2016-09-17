@@ -7,14 +7,14 @@ module.exports = {
     },
 
     'twitterAuth' : {
-        'consumerKey'       : '5P6t0RBgM9UtJtMxUdyO5Xg5K',
-        'consumerSecret'    : 'uBdmqBiaxaYHlvGdkosNwqUcmM7I07tWdLl518NZzuHNjxCefC',
+        'consumerKey'       : 'aWV3uBcIv0iZxaAHu0rZTlENo',
+        'consumerSecret'    : 'HQ1U0inD3LcVp7m0O6Rg9JLSWrabB7RXmlPsznLu7DWjXwtZ5I',
         'callbackURL'       : 'http://mapshare.co/auth/twitter/callback'
     },
 
     'googleAuth' : {
-        'clientID'      : '875266097111-4fiss65a6hrl12lq2ivsrbsakov432tf.apps.googleusercontent.com',
-        'clientSecret'  : 'mQrtJ7RwFQySQCBQe455DdoM',
+        'clientID'      : '1001709937240-vsbmj6hj7e9hg9avgvdl16lgdjr4dd2p.apps.googleusercontent.com',
+        'clientSecret'  : 'uMWkQcR5I6CvBkFcCEPnlv6Z',
         'callbackURL'   : 'http://mapshare.co/auth/google/callback'
     }
 
