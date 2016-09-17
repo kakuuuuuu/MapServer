@@ -40,8 +40,8 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 // routes ======================================================================
 require('./server/config/routes.js')(app, passport, path);
 
-var server = app.listen(7000,function(){
-  console.log('MapServer on port 7000')
+var server = app.listen(8000,function(){
+  console.log('MapServer on port 8000')
 })
 
 
