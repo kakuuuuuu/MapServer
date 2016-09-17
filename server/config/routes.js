@@ -1,16 +1,12 @@
 var users = require('../controllers/Users.js');
 var rooms = require('../controllers/Rooms')
-module.exports = function(app, passport, path, client) {
+module.exports = function(app, passport, path) {
 // ===============================================================================================================
 // API ROUTES ===============================================================================================
 // ===============================================================================================================
     // Return user data from session on successful login
     app.get('/getuser', isLoggedIn, function(req, res){
         users.getuser(req, res)
-    })
-    // Return data from Amazon Product Advertisement API
-    app.post('/searchgames', isLoggedIn, function(req, res){
-        users.amazonsearch(req, res, client)
     })
     // Returns all rooms user is invited to
     app.get('/getrooms/:id', isLoggedIn, function(req, res){
@@ -45,9 +41,6 @@ module.exports = function(app, passport, path, client) {
 // HOMEPAGE ROUTES ===============================================================================================
 // ===============================================================================================================
     app.get('/', function(req, res) {
-        res.render('portfolio'); // load the index.ejs file
-    });
-    app.get('/landing', function(req, res) {
         res.render('index'); // load the index.ejs file
     });
     app.post('/user', passport.authenticate('local-signup'), function(req, res){

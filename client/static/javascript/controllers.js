@@ -17,40 +17,6 @@ market_module.controller('registerController', function($scope, userFactory, $lo
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-market_module.controller('streamsController', function($scope, userFactory, streamFactory, $routeParams){
-  // grabs div with id stream
-  var element = angular.element(document.querySelector('#stream'));
-  $scope.gameSearch = function(data){
-    // empties game list in case of prior search
-    $scope.options=[];
-    streamFactory.gameSearch($scope.newSearch, function(games){
-      // calls factory to return list of games
-      $scope.games = games;
-      })
-    // empties search field
-    $scope.newSearch = '';
-  }
-  $scope.search = function(game){
-    // reduces games list to chosen game
-    $scope.games = {games:[game]}
-    // calls factory to return matching amazon listings
-    streamFactory.amazon(game, function(data){
-      $scope.options=data;
-    })
-    // calls factory to return top streamer
-    streamFactory.search(game, function(streamer,game){
-      // only executes if streamer is returned
-      if(streamer!='nothing'){
-        $scope.streamer = streamer;
-        // Applies html to div with id #stream
-        element.html("<iframe src='http://player.twitch.tv?channel={"+$scope.streamer+"}' height='400' width='100%'  frameborder='0' scrolling='no' allowfullscreen='true'></iframe>")
-        $scope.streamgame = game.name
-      }
-    })
-  }
-})
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // MAP SHARE

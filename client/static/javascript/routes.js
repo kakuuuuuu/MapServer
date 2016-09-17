@@ -3,13 +3,10 @@ var market_module = angular.module('black_market', ['ngRoute', 'ngStorage', 'uiG
 market_module.config(function ($routeProvider) {
       $routeProvider
         .when('/',{
-          templateUrl: 'partials/profile.html'
-        })
-        .when('/search',{
-          templateUrl: 'partials/search.html'
-        })
-        .when('/lobby',{
           templateUrl: 'partials/lobby.html'
+        })
+        .when('/profile',{
+          templateUrl: 'partials/profile.html'
         })
         .when('/room/:id',{
           templateUrl: 'partials/room.html'
