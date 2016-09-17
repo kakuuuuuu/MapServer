@@ -1,8 +1,8 @@
 module.exports = {
 
     'facebookAuth' : {
-        'clientID'      : '1874757336084999', // your App ID
-        'clientSecret'  : 'b5ac25d341d1fe688fc153ec0445bc17', // your App Secret
+        'clientID'      : '548328062026933', // your App ID
+        'clientSecret'  : '1115e3782a04972180a218b00db6e14d', // your App Secret
         'callbackURL'   : 'http://mapshare.co/auth/facebook/callback'
     },
 
