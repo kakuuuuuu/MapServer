@@ -20,6 +20,7 @@
   "dependencies": {
     "amazon-product-api": "^0.3.10",
     "angular-google-maps": "^2.3.3",
+    "angular-route": "^1.6.0",
     "bcrypt-nodejs": "latest",
     "body-parser": "^1.0.0",
     "bson": "^0.4.23",

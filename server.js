@@ -30,6 +30,7 @@ app.use(cors());
 app.set('view engine', 'ejs'); // set up ejs for templating
 var oneYear = 1 * 365 * 24 * 60 * 60 * 1000
 app.use(express.static(__dirname + "/client/static",{ maxAge: oneYear }))
+app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 app.set('views', path.join(__dirname,'./client/views'));
 // required for passport
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
