@@ -196,7 +196,7 @@ market_module.controller('mapsController', function($scope, userFactory, roomFac
     // starts loading gif
     $scope.loading=true
     // requests data from google places api
-    $http.get('https://maps.googleapis.com/maps/api/geocode/json?address='+$scope.location.name+'&key=AIzaSyC3SQ3ovU47it6DB23_yZTfCbWTOT3r_1E').success(function($http){
+    $http.get('https://maps.googleapis.com/maps/api/geocode/json?address='+$scope.location.name+'&key=AIzaSyC3SQ3ovU47it6DB23_yZTfCbWTOT3r_1E').then(function($http){
       // executes if results are returned
       if($http.results.length>0){
         roomFactory.changeCoords(id, $http.results[0].geometry.location, $scope.location.name, function(){
